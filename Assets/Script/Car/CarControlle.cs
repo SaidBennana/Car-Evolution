@@ -7,12 +7,12 @@ public class CarControlle : MonoBehaviour
     [SerializeField] float Speed = 30;
     [SerializeField] Transform[] Wheels;
     [SerializeField] SwipManager swipManager;
+
     private void Start()
     {
         foreach (Transform item in Wheels)
         {
             item.DORotate(new Vector3(360, 0, 0), 0.3f, RotateMode.FastBeyond360).SetLoops(-1);
-
         }
     }
 
@@ -49,6 +49,28 @@ public class CarControlle : MonoBehaviour
         else if (transform.position.x > 0.701f)
         {
             transform.position = new Vector3(0.701f, transform.position.y, transform.position.z);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "BoolWater":
+                {
+                    Speed = 0;
+                    foreach (Transform item in Wheels)
+                    {
+                        DOTween.Kill(item);
+                    }
+                    if (other.gameObject.TryGetComponent(out BorlWater borl))
+                    {
+                        borl.distroyThis();
+                    }
+
+                    break;
+                }
+
         }
     }
 
