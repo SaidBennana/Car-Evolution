@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
@@ -8,18 +9,27 @@ public class CarControlle : MonoBehaviour
     [SerializeField] Transform[] Wheels;
     [SerializeField] SwipManager swipManager;
 
-    private void Start()
-    {
-        foreach (Transform item in Wheels)
-        {
-            item.DORotate(new Vector3(360, 0, 0), 0.3f, RotateMode.FastBeyond360).SetLoops(-1);
-        }
-    }
+
+    [Header("Exploion Effetc")]
+    [SerializeField] Transform EffetcExplosion;
+
 
 
     private void Update()
     {
-        Move();
+        if (GameManager.Instance.Game_Start)
+            Move();
+    }
+
+    public IEnumerator StartGame(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Speed = 2;
+        foreach (Transform item in Wheels)
+        {
+            item.DORotate(new Vector3(360, 0, 0), 0.3f, RotateMode.FastBeyond360).SetLoops(-1);
+        }
+        GameManager.Instance.Game_Start = true;
     }
 
     void Move()
@@ -59,6 +69,7 @@ public class CarControlle : MonoBehaviour
             case "BoolWater":
                 {
                     Speed = 0;
+                    EffetcExplosion.gameObject.SetActive(true);
                     foreach (Transform item in Wheels)
                     {
                         DOTween.Kill(item);
@@ -67,6 +78,7 @@ public class CarControlle : MonoBehaviour
                     {
                         borl.distroyThis();
                     }
+                    GameManager.Instance._Can_Shoot = false;
 
                     break;
                 }

@@ -25,6 +25,7 @@ public class weaponCar : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance._Can_Shoot) return;
         ray.direction = Vector3.forward;
         ray.origin = PivotPointShoot.position;
 
