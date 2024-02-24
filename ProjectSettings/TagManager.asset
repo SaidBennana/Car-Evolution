@@ -8,6 +8,7 @@ TagManager:
   - PPlatform
   - BoolWater
   - Bullit
+  - finashLine
   layers:
   - Default
   - TransparentFX
