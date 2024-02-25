@@ -17037,6 +17037,7 @@ GameObject:
   - component: {fileID: 6363451995766275360}
   - component: {fileID: 6363451995766275363}
   - component: {fileID: 8654185585001319461}
+  - component: {fileID: 3748001039531004125}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -17181,17 +17182,176 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CarsLIstShop:
   - price: 0
-    CarObject: {fileID: 0}
-    lockImage: {fileID: 0}
-    CarImage: {fileID: 0}
+    CarObject: {fileID: 5260132287209053813}
+    lockImage: {fileID: 2800000, guid: 1758c4c9b94531a42ae25ddea11975de, type: 3}
+    CarImage: {fileID: 2800000, guid: 44ea6884eef1a9445bedaab68822315d, type: 3}
+    is_get_it: 1
+    is_Select: 1
+  - price: 120
+    CarObject: {fileID: 5611548031436207589}
+    lockImage: {fileID: 2800000, guid: e80d99714378fe642a618fc6ba84d03b, type: 3}
+    CarImage: {fileID: 2800000, guid: e8bed66c4ee060849a26cc625803ff3a, type: 3}
     is_get_it: 0
     is_Select: 0
-  - price: 0
-    CarObject: {fileID: 0}
-    lockImage: {fileID: 0}
-    CarImage: {fileID: 0}
+  - price: 140
+    CarObject: {fileID: 3961224509503647355}
+    lockImage: {fileID: 2800000, guid: b8dd2e107a70b5748911ab3406dd4d83, type: 3}
+    CarImage: {fileID: 2800000, guid: acd6006467f9a904f910c7bbda3848d2, type: 3}
     is_get_it: 0
     is_Select: 0
+  - price: 170
+    CarObject: {fileID: 3898470497839868288}
+    lockImage: {fileID: 2800000, guid: 452b7966e0bf86844898426c4a42c049, type: 3}
+    CarImage: {fileID: 2800000, guid: 452b7966e0bf86844898426c4a42c049, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 180
+    CarObject: {fileID: 8907164973995108364}
+    lockImage: {fileID: 2800000, guid: 81091b789b58d1c45b24e4e8e015e167, type: 3}
+    CarImage: {fileID: 2800000, guid: 217861237a53d364caf901f9c2077abd, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 200
+    CarObject: {fileID: 2929238410923244843}
+    lockImage: {fileID: 2800000, guid: b38d0ddf5b7d5944da9b32794a50e771, type: 3}
+    CarImage: {fileID: 2800000, guid: 0d6b7ff0cf1ff154cb6c8e67202c78bc, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 250
+    CarObject: {fileID: 6446926203332424499}
+    lockImage: {fileID: 2800000, guid: 3bbddb265f298fa438c818436f3dfa4d, type: 3}
+    CarImage: {fileID: 2800000, guid: 15b242f9d2e19cf4090688ce2d7bea20, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 279
+    CarObject: {fileID: 7467862945072644929}
+    lockImage: {fileID: 2800000, guid: 55c0d549758941644b1f514f35285a69, type: 3}
+    CarImage: {fileID: 2800000, guid: 34476ccdebdcf044a9f009ed3ad43f0e, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 284
+    CarObject: {fileID: 1528366942841218509}
+    lockImage: {fileID: 2800000, guid: c9fc5de1fc5e19744b2180f2da9597b0, type: 3}
+    CarImage: {fileID: 2800000, guid: 4d265217f1e33fb40a1f7dfcf5daca33, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 293
+    CarObject: {fileID: 7302803360504791681}
+    lockImage: {fileID: 2800000, guid: 422d8fab93df4854a94e3510fe98a15a, type: 3}
+    CarImage: {fileID: 2800000, guid: e16254933be167f42a4a221119d64a45, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 312
+    CarObject: {fileID: 8817043616124065400}
+    lockImage: {fileID: 2800000, guid: 352b4b6747c80b947ac81463572b9c79, type: 3}
+    CarImage: {fileID: 2800000, guid: 5becdbed5f322424db963237c3ef9d67, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 324
+    CarObject: {fileID: 859073218712287022}
+    lockImage: {fileID: 2800000, guid: 74b5d11ea73e34242861969afd3d432c, type: 3}
+    CarImage: {fileID: 2800000, guid: 067f81ac5573f6d47963c851bc8579a0, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 357
+    CarObject: {fileID: 921639923658087428}
+    lockImage: {fileID: 2800000, guid: 81392d079b906ba4f86c69cd00a41fc3, type: 3}
+    CarImage: {fileID: 2800000, guid: 6c49274986497fc47973ef34847dca4c, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 380
+    CarObject: {fileID: 4707286896319120810}
+    lockImage: {fileID: 2800000, guid: bacd8d4c267efe34593f8a22c3eef21d, type: 3}
+    CarImage: {fileID: 2800000, guid: 3cb3c1bc1011800478f41d9eca19e896, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 398
+    CarObject: {fileID: 9203487674898160967}
+    lockImage: {fileID: 2800000, guid: df387ad8730322b439e87daf148fa375, type: 3}
+    CarImage: {fileID: 2800000, guid: 1c783bcfd8822ee4a85aa0eda6f84b20, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 412
+    CarObject: {fileID: 2616102763166431283}
+    lockImage: {fileID: 2800000, guid: 07c6703c706a8134398b879fa9e314b0, type: 3}
+    CarImage: {fileID: 2800000, guid: 6ef8edf5bb14ad948a12b84cbf3c5134, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 423
+    CarObject: {fileID: 423974744361302806}
+    lockImage: {fileID: 2800000, guid: 66c39f3e380caed4c8e3b99c85546ae6, type: 3}
+    CarImage: {fileID: 2800000, guid: 2545370b4c7803e4b9183fe21c4fa404, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 456
+    CarObject: {fileID: 9176208925540817735}
+    lockImage: {fileID: 2800000, guid: 8455ba0a1849a4a4c91d8c23343e8a39, type: 3}
+    CarImage: {fileID: 2800000, guid: f70096d5e384c394e8743446037e3962, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 489
+    CarObject: {fileID: 7205213196719753586}
+    lockImage: {fileID: 2800000, guid: f89609b891293214998caca059977124, type: 3}
+    CarImage: {fileID: 2800000, guid: c95dfc30e76acdf44b9ca50a7f20d91f, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 480
+    CarObject: {fileID: 1533736837110430003}
+    lockImage: {fileID: 2800000, guid: d211c55284ece944ab53c3eaaf6866b5, type: 3}
+    CarImage: {fileID: 2800000, guid: c4235efab89073948a609785b649e0c0, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 490
+    CarObject: {fileID: 8563904949474981598}
+    lockImage: {fileID: 2800000, guid: b6d86f6f5d0d85e49bb76212a3fc1b2e, type: 3}
+    CarImage: {fileID: 2800000, guid: 6bc6fa009f861054aa3bcea590a124c4, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 512
+    CarObject: {fileID: 6597055385691739723}
+    lockImage: {fileID: 2800000, guid: ad544589ecf44224793b221ecc6fedf7, type: 3}
+    CarImage: {fileID: 2800000, guid: 768f7026b7a010642974f012beb6a484, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 512
+    CarObject: {fileID: 7749937536985475702}
+    lockImage: {fileID: 2800000, guid: fe4d1607eb15f0846be1e24f5271a4fd, type: 3}
+    CarImage: {fileID: 2800000, guid: 2f4ffea4d37e361408fb42cddc2b6e98, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 546
+    CarObject: {fileID: 6085706376243829374}
+    lockImage: {fileID: 2800000, guid: acde4a1c313168e4d819616bd5b1cc8c, type: 3}
+    CarImage: {fileID: 2800000, guid: 2b0a0eb410142784e85bcfdf7e1a9707, type: 3}
+    is_get_it: 0
+    is_Select: 0
+  - price: 567
+    CarObject: {fileID: 4669461916243518481}
+    lockImage: {fileID: 2800000, guid: 6153ac1c0af313c4eb98bd5daee97a22, type: 3}
+    CarImage: {fileID: 2800000, guid: a130b167e6635b04c9817adf0b4a7671, type: 3}
+    is_get_it: 0
+    is_Select: 0
+--- !u!95 &3748001039531004125
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949356172646802768}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80dd7002d3c11d9409d3e817f9c5b79a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3007680706385821368
 GameObject:
   m_ObjectHideFlags: 0

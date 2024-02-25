@@ -103,5 +103,11 @@ namespace As_Star
             //ES3.Save(SaveKeys.MusicKey, MusicObj.activeInHierarchy);
             return MusicObj.activeInHierarchy;
         }
+
+        public void InitializeSound()
+        {
+            Debug.Log("Sound Manager is initialize");
+
+        }
     }
 }

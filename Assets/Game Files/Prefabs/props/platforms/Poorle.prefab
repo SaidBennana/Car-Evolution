@@ -51,6 +51,8 @@ MonoBehaviour:
   health: 4
   GFX: {fileID: 8306686495828923831}
   Effetc: {fileID: 4061648339797307089}
+  MonyObject: {fileID: 8689026999443958802, guid: d1b1e45f13b44594f9233267aaa01307,
+    type: 3}
 --- !u!65 &1806994239846463095
 BoxCollider:
   m_ObjectHideFlags: 0

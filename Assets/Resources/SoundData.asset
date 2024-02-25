@@ -13,15 +13,35 @@ MonoBehaviour:
   m_Name: SoundData
   m_EditorClassIdentifier: 
   Sounds:
-  - nameClip: 
+  - nameClip: Click
     source: {fileID: 0}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 2551c2ab605f54b47adada2cad0b8792, type: 3}
     volume: 1
-  - nameClip: 
+  - nameClip: Collect
     source: {fileID: 0}
-    clip: {fileID: 0}
-    volume: 1
-  - nameClip: 
+    clip: {fileID: 8300000, guid: 2551c2ab605f54b47adada2cad0b8792, type: 3}
+    volume: 0.549
+  - nameClip: GetMont
     source: {fileID: 0}
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: d99ac0d2c31512f4cbbd7b8e9f95c40f, type: 3}
+    volume: 0.632
+  - nameClip: win
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: dad86bd5cb80495408df60f8edea4f24, type: 3}
     volume: 1
+  - nameClip: lose
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 1792b13354227c34292cc406344e8429, type: 3}
+    volume: 1
+  - nameClip: CarDestroy
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 487fc9578616e6a45973ce8e9152afa0, type: 3}
+    volume: 1
+  - nameClip: BorrlDestroy
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 37a94fc19ad1afa44abd5a7589b402cf, type: 3}
+    volume: 1
+  - nameClip: AttachItem
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 6f9a469d0095c1141aaff6cd371998e9, type: 3}
+    volume: 0.628

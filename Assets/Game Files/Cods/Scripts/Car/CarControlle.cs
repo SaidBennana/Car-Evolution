@@ -1,4 +1,5 @@
 using System.Collections;
+using As_Star;
 using DG.Tweening;
 using UnityEngine;
 
@@ -97,12 +98,17 @@ public class CarControlle : MonoBehaviour
                     if (GameManager.Instance.FinshLine)
                     {
                         StartCoroutine(UI_Game.intance.WinFun()); ;
+                        SoundManager.instance.PlayeWithIndex(3);
+
 
                     }
                     else
                     {
                         StartCoroutine(UI_Game.intance.loseFun());
+                        SoundManager.instance.PlayeWithIndex(4);
+
                     }
+                    SoundManager.instance.PlayeWithIndex(5);
 
                     break;
                 }

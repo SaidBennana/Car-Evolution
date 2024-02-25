@@ -1,3 +1,4 @@
+using As_Star;
 using TMPro;
 using UnityEngine;
 
@@ -29,6 +30,7 @@ public class PPlatform : MonoBehaviour
     {
         if (other.CompareTag("Bullit"))
         {
+
             if (value < 0)
             {
                 value -= 1;
@@ -39,6 +41,7 @@ public class PPlatform : MonoBehaviour
             }
             textMesh.text = value.ToString();
             other.gameObject.SetActive(false);
+            SoundManager.instance.PlayeWithIndex(1);
         }
     }
 

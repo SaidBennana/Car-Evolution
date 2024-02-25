@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using As_Star;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -20,6 +21,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        SoundManager.instance.InitializeSound();
+
     }
 
     /// Checks if a key exists in the save file and returns the value if it does, otherwise returns the default value.

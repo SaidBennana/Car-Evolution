@@ -1,3 +1,4 @@
+using As_Star;
 using GDTools.ObjectPooling;
 using UnityEngine;
 
