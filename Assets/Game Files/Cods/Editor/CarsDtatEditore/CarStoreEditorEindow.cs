@@ -18,7 +18,7 @@ public class CarStoreEditorEindow : EditorWindow
     }
     private void OnEnable()
     {
-        GameObject CarObject = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game Files/Prefabs/Cars/Car.prefab");
+        GameObject CarObject = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game Files/Prefabs/Car/Car.prefab");
         _DataCarsShop = CarObject.GetComponent<DataCarsShop>();
 
     }

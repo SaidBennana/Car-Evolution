@@ -1,8 +1,7 @@
-VisualElement {
-}
+VisualElement {}
 
 .SceneProperty {
-    height: 272px;
+    height: 100%;
     margin-left: 20px;
     margin-top: 21px;
     border-left-color: rgb(103, 103, 103);
@@ -15,4 +14,19 @@ VisualElement {
     border-left-width: 4px;
     flex-grow: 1;
     width: 164px;
+}
+
+.SelectElement {
+    padding: 5px 4px;
+    background-color: rgba(32, 32, 160, 0.836);
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
 }
