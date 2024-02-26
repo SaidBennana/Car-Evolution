@@ -54,7 +54,7 @@ public class CatEditor : PropertyDrawer
 
 
 
-        Set_Style_Image_Objects(property);
+        Set_Style_Image_Objects();
 
 
 
@@ -74,43 +74,21 @@ public class CatEditor : PropertyDrawer
 
         return root;
     }
-    void Set_Style_Image_Objects(SerializedProperty property)
+    void Set_Style_Image_Objects()
     {
         lockImage.AddToClassList("ImageFeild");
         CarImage.AddToClassList("ImageFeild");
 
-        /// CarImage initialize 
-        // CarImage.objectType = typeof(Texture2D);
-        // CarImage.value = property.FindPropertyRelative("CarImage").objectReferenceValue;
 
         VisualElement ImageObject = new VisualElement();
         ImageObject.AddToClassList("ImageObject");
         CarImage.Add(ImageObject);
-        /// CarImage initialize end
 
-
-        /// lockImage initialize
-        // lockImage.objectType = typeof(Texture2D);
-        // lockImage.value = property.FindPropertyRelative("lockImage").objectReferenceValue;
 
         ImageObject = new VisualElement();
         ImageObject.AddToClassList("ImageObject");
         lockImage.Add(ImageObject);
 
-        /// lockImage initialize end
-
-
-        // lockImage.RegisterValueChangedCallback((vv) =>
-        // {
-        //     Debug.Log("Image Changet");
-        //     property.FindPropertyRelative("lockImage").objectReferenceValue = vv.newValue;
-
-        // });
-        // CarImage.RegisterValueChangedCallback((vv) =>
-        // {
-        //     property.FindPropertyRelative("CarImage").objectReferenceValue = vv.newValue;
-
-        // });
 
         imagesPerant.Add(lockImage);
         imagesPerant.Add(CarImage);

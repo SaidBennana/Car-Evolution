@@ -1,0 +1,18 @@
+VisualElement {
+}
+
+.SceneProperty {
+    height: 272px;
+    margin-left: 20px;
+    margin-top: 21px;
+    border-left-color: rgb(103, 103, 103);
+    border-right-color: rgb(103, 103, 103);
+    border-top-color: rgb(103, 103, 103);
+    border-bottom-color: rgb(103, 103, 103);
+    border-top-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+    flex-grow: 1;
+    width: 164px;
+}
