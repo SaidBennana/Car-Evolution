@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using As_Star;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -14,7 +16,10 @@ public class UI_Game : MonoBehaviour
     #region Varbals UI
     Button StartGameButton;
     VisualElement WinUI, loseUI, StorePerant;
+    VisualElement NavBarStartGame;
+    VisualElement Setting;
     ScrollView ScrollStore;
+    Label StartUIMont;
 
     #endregion
 
@@ -26,9 +31,7 @@ public class UI_Game : MonoBehaviour
     private void Awake()
     {
         intance = this;
-    }
-    void Start()
-    {
+
         root = _UIDocument.rootVisualElement;
 
         // initialize varbals UI
@@ -36,6 +39,15 @@ public class UI_Game : MonoBehaviour
         loseUI = root.Q<VisualElement>("LoseUI");
         StorePerant = root.Q<VisualElement>("StorePerant");
         ScrollStore = StorePerant.Q<ScrollView>("ScrollView");
+        StartUIMont = root.Q<Label>("StartUIMont");
+        NavBarStartGame = root.Q<VisualElement>("NavBarStartGame");
+        Setting = NavBarStartGame.Q<VisualElement>("Setting");
+
+    }
+    void Start()
+    {
+
+        SetTextMony(GameManager.Instance.Mony);
 
 
         /// Initializes the start game and other buttons 
@@ -57,16 +69,19 @@ public class UI_Game : MonoBehaviour
             GameManager.Instance.CameraGame.gameObject.SetActive(true);
             StartCoroutine(GameManager.Instance.carControlle.StartGame(1));
             StartGameButton.parent.style.display = DisplayStyle.None;
+            SoundManager.instance.PlayeWithIndex(0);
 
         };
 
         WinUI.Q<Button>("NextGameButton").clicked += () =>
         {
             print("Next Level");
+            SoundManager.instance.PlayeWithIndex(0);
 
         };
         loseUI.Q<Button>("RelodeGameButton").clicked += () =>
         {
+            SoundManager.instance.PlayeWithIndex(0);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         };
@@ -74,12 +89,70 @@ public class UI_Game : MonoBehaviour
         // Store Button open and close
         root.Q<Button>("OpenStoreButton").clicked += () =>
         {
+            SoundManager.instance.PlayeWithIndex(0);
             StorePerant.ToggleInClassList("Animation");
         };
         StorePerant.Q<Button>("CloseButton").clicked += () =>
         {
+            SoundManager.instance.PlayeWithIndex(0);
             StorePerant.ToggleInClassList("Animation");
         };
+        NavBarStartGame.Q<Button>("SettingButton").clicked += () =>
+        {
+            Setting.ToggleInClassList("CloseSetting");
+        };
+
+        // Sound Manager
+
+        Setting.Q<Button>("Sound").clicked += () =>
+        {
+            Setting.Q<Button>("Sound").ToggleInClassList("SoundClose");
+
+            SoundManager.instance.CanPlaySound = !SoundManager.instance.CanPlaySound;
+
+            ES3.Save(SaveKeys.SoundKey, SoundManager.instance.CanPlaySound);
+
+
+            SoundManager.instance.PlayeWithIndex(0);
+        };
+
+        Setting.Q<Button>("Music").clicked += () =>
+        {
+            Setting.Q<Button>("Music").ToggleInClassList("MusicClose");
+
+            SoundManager.instance.CanPlayMusic = !SoundManager.instance.CanPlayMusic;
+            SoundManager.instance.MusicControlle();
+
+            ES3.Save(SaveKeys.MusicKey, SoundManager.instance.CanPlayMusic);
+
+            SoundManager.instance.PlayeWithIndex(0);
+
+        };
+
+        // Rewords Button win lose 
+        WinUI.Q<Button>("GetReword").clicked += () =>
+        {
+            Debug.Log("Get Reword Win");
+
+        };
+        loseUI.Q<Button>("GetReword").clicked += () =>
+        {
+            Debug.Log("Get Reword lose");
+
+        };
+
+
+
+    }
+    // Button Sound And Music StartGame load data
+    public void InitButtons(bool Sound, bool music)
+    {
+        if (!Sound)
+            Setting.Q<Button>("Sound").ToggleInClassList("SoundClose");
+        if (!music)
+            Setting.Q<Button>("Music").ToggleInClassList("MusicClose");
+
+
 
 
     }
@@ -135,23 +208,86 @@ public class UI_Game : MonoBehaviour
 
         return () =>
         {
-            Debug.Log(index);
-            DataCarsShop.ins.UNSelectAllCar(index);
-            InitilaizeStore();
+            if (_CarsData[index].is_get_it)
+            {
 
+                DataCarsShop.ins.UNSelectAllCar(index);
+                SoundManager.instance.PlayeWithIndex(0);
+
+            }
+            else if (GameManager.Instance.Mony >= _CarsData[index].price)
+            {
+                SoundManager.instance.PlayeWithIndex(8);
+                GameManager.Instance.Mony -= _CarsData[index].price;
+                DataCarsShop.ins.UNSelectAllCar(index);
+                SetTextMony(GameManager.Instance.Mony);
+            }
+            else if (GameManager.Instance.Mony <= _CarsData[index].price)
+            {
+                SoundManager.instance.PlayeWithIndex(9);
+
+            }
+
+            InitilaizeStore();
         };
 
     }
     public IEnumerator WinFun()
     {
+        GameManager.Instance.Game_Start = false;
+
+
         yield return new WaitForSeconds(1.6f);
         WinUI.style.display = DisplayStyle.Flex;
+        int MonyAnimtion = 0;
+
+        Label WinScroreText;
+        WinScroreText = WinUI.Q<Label>("WinScroreText");
+
+        int value = -170;
+        DOTween.To(() => value, x => value = x, 0, 1).SetEase(Ease.InBack).OnUpdate(() =>
+        {
+            WinUI.style.translate = new StyleTranslate(new Translate(new Length(value, LengthUnit.Percent), 0));
+        }).OnComplete(() =>
+        {
+            DOTween.To(() => MonyAnimtion, x => MonyAnimtion = x, GameManager.Instance.Mony, 1).OnUpdate(() =>
+            {
+                WinScroreText.text = MonyAnimtion.ToString();
+            });
+
+        });
     }
 
     public IEnumerator loseFun()
     {
+        GameManager.Instance.Game_Start = false;
+
         yield return new WaitForSeconds(1.6f);
         loseUI.style.display = DisplayStyle.Flex;
+
+        int MonyAnimtion = 0;
+
+        Label LoseScroreText;
+        LoseScroreText = loseUI.Q<Label>("LoseScroreText");
+        int value = 170;
+        DOTween.To(() => value, x => value = x, 0, 1).SetEase(Ease.InBack).OnUpdate(() =>
+        {
+            loseUI.style.translate = new StyleTranslate(new Translate(new Length(value, LengthUnit.Percent), 0));
+
+        }).OnComplete(() =>
+        {
+            DOTween.To(() => MonyAnimtion, x => MonyAnimtion = x, GameManager.Instance.Mony, 1).OnUpdate(() =>
+            {
+                LoseScroreText.text = MonyAnimtion.ToString();
+            });
+
+        });
     }
 
+    public void SetTextMony(int mony)
+    {
+        ES3.Save(SaveKeys.MonyKey, GameManager.Instance.Mony);
+        StartUIMont.text = mony.ToString();
+    }
 }
+

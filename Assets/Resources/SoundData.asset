@@ -15,12 +15,12 @@ MonoBehaviour:
   Sounds:
   - nameClip: Click
     source: {fileID: 0}
-    clip: {fileID: 8300000, guid: 2551c2ab605f54b47adada2cad0b8792, type: 3}
+    clip: {fileID: 8300000, guid: f6ba9d1ef8406844594a6e7f535ef86c, type: 3}
     volume: 1
   - nameClip: Collect
     source: {fileID: 0}
-    clip: {fileID: 8300000, guid: 2551c2ab605f54b47adada2cad0b8792, type: 3}
-    volume: 0.549
+    clip: {fileID: 8300000, guid: 0809eb4ca167a464599e11ab8a4b57db, type: 3}
+    volume: 0.29
   - nameClip: GetMont
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: d99ac0d2c31512f4cbbd7b8e9f95c40f, type: 3}

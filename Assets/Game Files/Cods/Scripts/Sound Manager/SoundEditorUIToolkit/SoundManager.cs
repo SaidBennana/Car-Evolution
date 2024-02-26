@@ -32,7 +32,8 @@ namespace As_Star
         private SoundObject Sounds;
 
         #region  controlleSound Varibals
-        bool CanPlaySound = true;
+        public bool CanPlaySound = true;
+        public bool CanPlayMusic = true;
 
         #endregion
 
@@ -57,22 +58,15 @@ namespace As_Star
                     item.source = audiosurce;
                 }
             }
-            // if (GameManager.instance)
-            // {
-            //     MusicObj.SetActive(!GameManager.instance.LoadData<bool>(SaveKeys.MusicKey, true));
-            //     CanPlaySound = !GameManager.instance.LoadData<bool>(SaveKeys.SoundKey, true);
-
-            //     if (UI_Game.Instance)
-            //     {
-            //         UI_Game.Instance.MusicUI();
-            //         UI_Game.Instance.SoundUI();
-            //     }
-            // }
-
-
         }
 
-
+        private void Start()
+        {
+            CanPlaySound = GameManager.Instance.LoadData<bool>(SaveKeys.SoundKey, true);
+            CanPlayMusic = GameManager.Instance.LoadData<bool>(SaveKeys.MusicKey, true);
+            MusicControlle();
+            UI_Game.intance.InitButtons(CanPlaySound, CanPlayMusic);
+        }
         public void PlayeWithIndex(int index)
         {
             if (!CanPlaySound) return;
@@ -90,18 +84,10 @@ namespace As_Star
                 _Sound.source.PlayOneShot(_Sound.source.clip);
         }
 
-        // sound Controlle
-        public bool SoundControlle()
+
+        public void MusicControlle()
         {
-            CanPlaySound = !CanPlaySound;
-            //S3.Save(SaveKeys.SoundKey, CanPlaySound);
-            return CanPlaySound;
-        }
-        public bool MusicControlle()
-        {
-            MusicObj.SetActive(!MusicObj.activeInHierarchy);
-            //ES3.Save(SaveKeys.MusicKey, MusicObj.activeInHierarchy);
-            return MusicObj.activeInHierarchy;
+            MusicObj.SetActive(CanPlayMusic);
         }
 
         public void InitializeSound()

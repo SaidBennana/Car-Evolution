@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Game%20Files/Cods/Editor/UIKit/CarStore_UIKIT.uss?fileID=7433441132597879392&amp;guid=627b90c81bd33e24ea05524efef73546&amp;type=3#CarStore_UIKIT" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:IMGUIContainer style="height: 69px; background-color: rgba(0, 0, 0, 0.78);">
+            <ui:Label text="Cars Data" display-tooltip-when-elided="true" style="background-color: rgba(255, 255, 255, 0); color: rgb(255, 255, 255); -unity-text-align: middle-center; height: 62px; font-size: 40px;" />
+        </ui:IMGUIContainer>
+        <uie:PropertyField binding-path="CarsLIstShop" style="margin-top: 20px; text-shadow: 0 0 0 rgb(0, 0, 0); background-color: rgb(0, 0, 0); padding-top: 24px; padding-right: 24px; padding-bottom: 24px; padding-left: 24px; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

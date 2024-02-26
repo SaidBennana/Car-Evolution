@@ -30,7 +30,7 @@ public class weaponCar : MonoBehaviour
     private void FixedUpdate()
     {
         /// Checks if shooting is allowed before shooting a raycast forward from the pivot point shoot transform.
-        if (!GameManager.Instance._Can_Shoot) return;
+        if (!GameManager.Instance._Can_Shoot && !GameManager.Instance.Game_Start) return;
         ray.direction = Vector3.forward;
         ray.origin = PivotPointShoot.position;
 

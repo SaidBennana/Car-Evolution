@@ -252,7 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game_Start: 0
+  FinshLine: 0
   _Can_Shoot: 1
   CameraGame: {fileID: 0}
   CameraStart: {fileID: 0}
   carControlle: {fileID: 0}
+  Mony: 0

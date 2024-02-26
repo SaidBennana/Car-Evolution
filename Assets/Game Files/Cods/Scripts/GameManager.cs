@@ -18,10 +18,15 @@ public class GameManager : MonoBehaviour
     public CarControlle carControlle;
 
 
+    public int Mony = 0;
+
+
     private void Awake()
     {
         Instance = this;
         SoundManager.instance.InitializeSound();
+
+        Mony = LoadData<int>(SaveKeys.MonyKey, Mony);
 
     }
 

@@ -3,7 +3,7 @@
     flex-grow: 0;
     width: 100%;
     height: auto;
-    background-color: rgba(3, 3, 3, 0.418);
+    background-color: rgba(3, 3, 3, 0.42);
     top: auto;
     padding-top: 26px;
     padding-right: 26px;
@@ -13,6 +13,8 @@
     transition-duration: 1s;
     transition-timing-function: linear;
     bottom: 0;
+    max-width: 100%;
+    max-height: 80%;
 }
 
 .Animation {
@@ -52,13 +54,11 @@
     border-width: 2px;
     border-style: solid;
     -unity-font-style: bold;
-
 }
 
 .CardStore:active {
     background-color: rgba(10, 10, 10, 0.51);
 }
-
 
 .CardPerents {
     display: flex;
@@ -67,4 +67,41 @@
     justify-content: center;
     width: 100%;
     background-color: rgba(7, 7, 7, 0.5);
+}
+
+.CloseSetting {
+    display: none;
+}
+
+.SoundOpen {
+    height: 108px;
+    width: 103px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url('project://database/Assets/Game%20Files/Art/Assets/Car%20Evolution%20Assets/Sprite/ic_sound_on.png?fileID=2800000&guid=e203469450f5c0240b8e6e62fa751dfc&type=3#ic_sound_on');
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.SoundClose {
+    background-image: url('project://database/Assets/Game%20Files/Art/Assets/Car%20Evolution%20Assets/Sprite/ic_sound_off.png?fileID=2800000&guid=57b7bbb5d22ea374da8c23b0be01971c&type=3#ic_sound_off');
+}
+
+.MusicOpen {
+    height: 108px;
+    width: 103px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url('project://database/Assets/Game%20Files/Art/Assets/Car%20Evolution%20Assets/Sprite/ic_music_on.png?fileID=2800000&guid=43b72c34fac70704296791fd41a6420f&type=3#ic_music_on');
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.MusicClose {
+    background-image: url('project://database/Assets/Game%20Files/Art/Assets/Car%20Evolution%20Assets/Sprite/ic_music_off.png?fileID=2800000&guid=04ac80d7f10e377429bc487cc88ec5b7&type=3#ic_music_off');
 }

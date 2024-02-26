@@ -38,6 +38,8 @@ public class BorlWater : MonoBehaviour
                         {
                             SoundManager.instance.PlayeWithIndex(2);
                             Destroy(obj.gameObject);
+                            GameManager.Instance.Mony += 2;
+                            UI_Game.intance.SetTextMony(GameManager.Instance.Mony);
                         });
                     });
 
