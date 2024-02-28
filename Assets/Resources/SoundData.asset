@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e63b079b9010541b18ec40997ed4e1, type: 3}
   m_Name: SoundData
   m_EditorClassIdentifier: 
+  Music: {fileID: 8300000, guid: 7c51a26fc2e903f42b81c2bccbb9eac9, type: 3}
   Sounds:
   - nameClip: Click
     source: {fileID: 0}
@@ -21,27 +22,31 @@ MonoBehaviour:
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 0809eb4ca167a464599e11ab8a4b57db, type: 3}
     volume: 0.29
-  - nameClip: GetMont
+  - nameClip: GetMony
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: d99ac0d2c31512f4cbbd7b8e9f95c40f, type: 3}
-    volume: 0.632
+    volume: 0.289
   - nameClip: win
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: dad86bd5cb80495408df60f8edea4f24, type: 3}
-    volume: 1
+    volume: 0.772
   - nameClip: lose
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 1792b13354227c34292cc406344e8429, type: 3}
-    volume: 1
+    volume: 0.772
   - nameClip: CarDestroy
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 487fc9578616e6a45973ce8e9152afa0, type: 3}
-    volume: 1
+    volume: 0.739
   - nameClip: BorrlDestroy
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 37a94fc19ad1afa44abd5a7589b402cf, type: 3}
-    volume: 1
+    volume: 0.789
   - nameClip: AttachItem
     source: {fileID: 0}
     clip: {fileID: 8300000, guid: 6f9a469d0095c1141aaff6cd371998e9, type: 3}
     volume: 0.628
+  - nameClip: Get Rerword
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: ae3350e73d78ef8479634b8cf537bd60, type: 3}
+    volume: 1

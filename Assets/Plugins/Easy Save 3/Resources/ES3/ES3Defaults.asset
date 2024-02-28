@@ -32,7 +32,11 @@ MonoBehaviour:
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - Cinemachine
+    - MaxSdk.Scripts
     - PPv2URPConverters
+    - GoogleMobileAds.Editor
+    - MaxSdk.Scripts.IntegrationManager.Editor
+    - MaxSdk.Scripts.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
