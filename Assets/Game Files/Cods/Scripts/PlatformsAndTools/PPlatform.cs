@@ -14,6 +14,11 @@ public class PPlatform : MonoBehaviour
 
     private void Start()
     {
+        SetColor();
+    }
+
+    public void SetColor()
+    {
         if (value < 0)
         {
             meshRenderer.material = Red;
@@ -24,6 +29,7 @@ public class PPlatform : MonoBehaviour
         }
 
         textMesh.text = value.ToString();
+
     }
 
     private void OnTriggerEnter(Collider other)

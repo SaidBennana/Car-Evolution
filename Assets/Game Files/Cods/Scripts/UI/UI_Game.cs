@@ -46,7 +46,6 @@ public class UI_Game : MonoBehaviour
     }
     void Start()
     {
-
         SetTextMony(GameManager.Instance.Mony);
 
 
@@ -75,7 +74,15 @@ public class UI_Game : MonoBehaviour
 
         WinUI.Q<Button>("NextGameButton").clicked += () =>
         {
-            print("Next Level");
+            if ((SceneManager.GetActiveScene().buildIndex + 1) == SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
             SoundManager.instance.PlayeWithIndex(0);
 
         };

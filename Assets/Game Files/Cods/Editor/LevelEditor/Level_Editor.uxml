@@ -4,11 +4,21 @@
         <ui:VisualElement style="height: auto; background-color: rgb(115, 115, 115); align-items: center; justify-content: center; font-size: 100%; flex-shrink: 0;">
             <ui:Label text="LEVEL EDITOR" display-tooltip-when-elided="true" style="font-size: 58px; -unity-font-style: bold;" />
         </ui:VisualElement>
-        <ui:VisualElement name="ScenePerant1" class="SceneProperty" style="justify-content: space-between; flex-grow: 1; margin-top: 10px; margin-left: 7px; height: auto; max-height: 100%; min-height: auto; flex-shrink: 1; width: 209px;">
-            <ui:Label text="LEVELS" display-tooltip-when-elided="true" style="align-items: center; -unity-text-align: middle-center; height: 36px; font-size: 27px;" />
-            <ui:ScrollView name="ScenePerant2" horizontal-scroller-visibility="Hidden" style="width: 100%; flex-grow: 1; height: auto; margin-top: 10px;" />
-            <ui:Button text="Add level" display-tooltip-when-elided="true" name="Add_level" style="margin-top: 5px; height: 35px; -unity-font-style: bold;" />
-            <ui:Button text="Remove Element" display-tooltip-when-elided="true" name="RemoveSelect" class="hide" style="margin-top: 4px; background-color: rgb(255, 0, 0); height: 31px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="ScenePerant1" class="SceneProperty" style="justify-content: space-between; flex-grow: 1; margin-top: 10px; margin-left: 7px; height: auto; max-height: 100%; min-height: auto; flex-shrink: 1; width: 209px;">
+                <ui:Label text="LEVELS" display-tooltip-when-elided="true" style="align-items: center; -unity-text-align: middle-center; height: 36px; font-size: 27px;" />
+                <ui:ScrollView name="ScenePerant2" horizontal-scroller-visibility="Hidden" style="width: 100%; flex-grow: 1; height: auto; margin-top: 10px;" />
+                <ui:Button text="Add level" display-tooltip-when-elided="true" name="Add_level" style="margin-top: 5px; height: 35px; -unity-font-style: bold;" />
+                <ui:Button text="Remove Level" display-tooltip-when-elided="true" name="RemoveSelect" class="hide" style="margin-top: 4px; background-color: rgb(255, 0, 0); height: 31px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="height: 100%; width: 743px; background-color: rgb(31, 26, 26); flex-direction: column; align-items: flex-end; flex-grow: 1;">
+                <ui:ScrollView name="PPlatfromPerantScroll" style="height: 100%; width: 100%; flex-grow: 1;" />
+                <ui:VisualElement style="height: 45px; width: 100%; position: relative; flex-direction: row; justify-content: space-between; padding-right: 20px; padding-left: 20px; padding-bottom: 8px; margin-top: 24px;">
+                    <ui:Button text="Open Level" display-tooltip-when-elided="true" name="OpenSelectScene" class="button" />
+                    <ui:Button text="Random Values" display-tooltip-when-elided="true" name="RandomValues" class="button" />
+                    <ui:Button text="generate Props" display-tooltip-when-elided="true" name="GenetarProps" class="button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

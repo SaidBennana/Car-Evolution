@@ -16,10 +16,49 @@ VisualElement {}
     width: 164px;
 }
 
+.SceneElement {
+    padding: 5px 4px;
+    margin: 5px 5px;
+    border-width: 2px;
+    border-color: wheat;
+    border-style: dotted;
+    cursor: cell;
+
+}
+
 .SelectElement {
     padding: 5px 4px;
     background-color: rgba(32, 32, 160, 0.836);
 }
+
+
+
+.button {}
+
+/* Props UI */
+.PerantFieldsPropBlue {
+    border-color: wheat;
+    border-width: 2px;
+    padding: 10px 20px;
+    justify-content: stretch;
+    background-color: rgb(31, 147, 255);
+
+}
+
+.PerantFieldsPropRed {
+    border-color: wheat;
+    border-width: 2px;
+    padding: 10px 20px;
+    justify-content: stretch;
+    background-color: rgb(255, 31, 31);
+
+
+}
+
+.PerantFieldsProp IntegerField {
+    margin-top: 10px;
+}
+
 
 
 

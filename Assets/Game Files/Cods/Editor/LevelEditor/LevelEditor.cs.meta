@@ -8,6 +8,11 @@ MonoImporter:
   - visualTreeAsset: {fileID: 9197481963319205126, guid: 7c847b66b05476c42a0b249a19b95e5f,
       type: 3}
   - levelsData: {fileID: 11400000, guid: 227f68a5d28bcc644bc5e4e5edc97ffb, type: 2}
+  - SceneCreate: {fileID: 102900000, guid: 3777364224e7fbf4f8dd7de787edcac6, type: 3}
+  - BPlatfroObject: {fileID: 2347789690411807716, guid: 75be644d1e43f234bb45d7a239cf24ac,
+      type: 3}
+  - PorrlWaterObject: {fileID: 2156915629524720129, guid: c5b442836aeb504449664385a94c055c,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
